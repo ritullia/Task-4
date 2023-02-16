@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -26,4 +26,47 @@
 .container h1 {
   margin-top: 50px;
   color: #333;
+}
+
+#output {
+  width: 100%;
+  display: flex;
+  margin-right: 30px;
+  margin-top: 10%;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 80px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cars-card {
+  width: 35rem;
+  height: auto;
+  background-color: #70798c;
+  border: 1px solid #70798c;
+  border-radius: 8px;
+}
+
+.cars-card > h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #dad2bc;
+  padding-top: 20px;
+}
+
+.cars-card > div {
+  padding: 25px 20px 15px 20px;
+}
+.models-text {
+  display: flex;
+  height: auto;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  color: #eaefd3;
+  padding: 10px;
 }
