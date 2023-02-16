@@ -10,28 +10,60 @@ bent minimalų stilių;
 -------------------------------------------------------------------------- */
 console.log("veikia")
 
+
 const carsData = './cars.json'
+
+const mainCardDiv = document.getElementById
 
 let data;
 
-
-function getCarsData() {
+async function getData() {
     fetch(carsData)
         .then((response) => response.json())
-        .then((json) => {
-            console.log(json)
+        .then((result) => {
+            console.log(result);
+            data = createCard(result)
+
         })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        .catch((error) => console.error(error));
 
 }
 
-function createCard() {
+
+function createCard(data) {
+    // console.log(data)
+
+    let cardsContainer = document.getElementById('output');
+    const cardBody = document.createElement('div');
+    cardBody.classList.add("cards-container")
+
+    data.forEach((key) => {
+        // console.log(key)
+        const carDiv = document.createElement('div')
+        carDiv.classList.add("cars-card")
+
+        const carBrand = document.createElement('h3')
+        carBrand.textContent = key.brand
+
+        const carModelsDiv = document.createElement('div')
+        carModelsDiv.classList.add("models-text")
+
+        const carModels = document.createElement('p');
+        carModels.textContent = key.models
+
+        carModelsDiv.append(carModels)
+        carDiv.append(carBrand, carModels)
+
+        cardBody.append(carDiv)
+
+
+    });
+
+    cardsContainer.append(cardBody)
 
 }
 
-getCarsData()
+getData()
 
 createCard()
 
