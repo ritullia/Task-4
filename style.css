@@ -48,14 +48,17 @@
 .cars-card {
   width: 100%;
   height: auto;
-  background-color: rgb(226, 226, 226);
-  border: 1px solid #333;
+  background-color: #70798c;
+  border: 1px solid #70798c;
+  border-radius: 8px;
 }
 
 .cars-card > h3 {
-  font-size: 25px;
+  font-size: 22px;
   padding: 10px;
   text-align: center;
+  color: #dad2bc;
+  padding-top: 20px;
 }
 
 .cars-card > div {
