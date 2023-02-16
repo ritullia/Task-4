@@ -33,6 +33,7 @@ async function getData() {
 function createCard(data) {
     // console.log(data)
 
+
     let cardsContainer = document.getElementById('output');
     const cardBody = document.createElement('div');
     cardBody.classList.add("cards-container")
@@ -49,7 +50,7 @@ function createCard(data) {
 
         const carModels = document.createElement('p');
         carModels.classList.add("models-text")
-        carModels.textContent = key.models
+        carModels.textContent = key.models.toString()
 
         carModelsDiv.append(carModels)
         carDiv.append(carBrand, carModelsDiv)
@@ -61,9 +62,12 @@ function createCard(data) {
     return cardsContainer
 }
 
+
+
+
+
 getData()
 
-createCard()
 
 
 

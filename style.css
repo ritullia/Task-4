@@ -31,22 +31,20 @@
 #output {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-right: 30px;
   margin-top: 10%;
 }
 
 .cards-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  margin-left: 80px;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .cars-card {
-  width: 100%;
+  width: 35rem;
   height: auto;
   background-color: #70798c;
   border: 1px solid #70798c;
@@ -54,18 +52,21 @@
 }
 
 .cars-card > h3 {
-  font-size: 22px;
-  padding: 10px;
+  font-size: 20px;
   text-align: center;
   color: #dad2bc;
   padding-top: 20px;
 }
 
 .cars-card > div {
-  padding: 20px;
+  padding: 25px 20px 15px 20px;
 }
 .models-text {
   display: flex;
-  padding: 15px;
+  height: auto;
+  width: 100%;
   font-size: 14px;
+  text-align: left;
+  color: #eaefd3;
+  padding: 10px;
 }
