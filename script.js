@@ -46,21 +46,19 @@ function createCard(data) {
         carBrand.textContent = key.brand
 
         const carModelsDiv = document.createElement('div')
-        carModelsDiv.classList.add("models-text")
 
         const carModels = document.createElement('p');
+        carModels.classList.add("models-text")
         carModels.textContent = key.models
 
         carModelsDiv.append(carModels)
-        carDiv.append(carBrand, carModels)
-
+        carDiv.append(carBrand, carModelsDiv)
         cardBody.append(carDiv)
-
 
     });
 
     cardsContainer.append(cardBody)
-
+    return cardsContainer
 }
 
 getData()
